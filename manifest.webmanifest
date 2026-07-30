@@ -1,0 +1,12 @@
+{
+  "name": "NEXO",
+  "short_name": "NEXO",
+  "description": "Centro personal privado NEXO",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080c16",
+  "theme_color": "#0a0e19",
+  "icons": []
+}

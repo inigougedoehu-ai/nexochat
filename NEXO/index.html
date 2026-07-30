@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0e19" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>NEXO</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand-row">
+      <button class="brand" id="brandBtn"><img src="assets/logo.svg" alt=""><span><b>NEXO</b><small>Centro personal</small></span></button>
+      <button class="icon mobile" id="closeMenu">✕</button>
+    </div>
+    <button class="new-chat"><span>＋</span> Nuevo chat <kbd>⌘K</kbd></button>
+    <p class="label">Chats</p>
+    <nav>
+      <button class="nav active" data-chat="Nexo" data-icon="✦" data-sub="En línea · conexión segura"><i class="violet">✦</i><span><b>Nexo</b><small>Asistente general</small></span><em></em></button>
+      <button class="nav" data-chat="Biblioteca" data-icon="B" data-sub="Libros, préstamos y lectura"><i class="amber">B</i><span><b>Biblioteca</b><small>Libros y recomendaciones</small></span></button>
+      <button class="nav" data-chat="Casa" data-icon="⌂" data-sub="Domótica y automatizaciones"><i class="cyan">⌂</i><span><b>Casa</b><small>Luces, clima y sensores</small></span></button>
+      <button class="nav" data-chat="Finanzas" data-icon="€" data-sub="Gastos, cuentas y alertas"><i class="green">€</i><span><b>Finanzas</b><small>Balances y presupuestos</small></span></button>
+      <button class="nav" data-chat="Sistema" data-icon="S" data-sub="Servidor, seguridad y discos"><i class="blue">S</i><span><b>Sistema</b><small>NAS y administración</small></span></button>
+    </nav>
+    <p class="label recent-label">Recientes</p>
+    <button class="recent">Planificar usuarios familiares <small>Hoy</small></button>
+    <button class="recent">Estado del servidor <small>Ayer</small></button>
+    <button class="recent">Alertas de discos NAS <small>Mié.</small></button>
+    <div class="profile"><span>IU</span><div><b>Iñigo</b><small>Superadministrador</small></div><button>⌃</button></div>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <main>
+    <header>
+      <div class="identity">
+        <button class="icon mobile" id="openMenu">☰</button>
+        <div class="chat-avatar" id="chatIcon">✦</div>
+        <div><h1 id="chatTitle">Nexo <span>✓</span></h1><p><i></i><span id="chatSub">En línea · conexión segura</span></p></div>
+      </div>
+      <div class="actions"><button class="icon">⌕</button><button class="icon" id="themeBtn">☼</button><button class="icon">•••</button></div>
+    </header>
+
+    <section class="conversation" id="conversation">
+      <div class="date">Hoy</div>
+      <section class="welcome">
+        <div class="spark">✦</div>
+        <div><small>NEXO ESTÁ LISTO</small><h2>Buenas tardes, Iñigo.</h2><p>Puedes hablar conmigo con total normalidad. Yo decidiré qué módulo necesita intervenir para ayudarte.</p></div>
+        <span class="secure">● Conexión local protegida</span>
+      </section>
+
+      <div class="msg assistant">
+        <div class="avatar-mini">✦</div>
+        <div><div class="meta">Nexo <span>20:18</span></div><div class="bubble"><p>He revisado el sistema. Todo funciona correctamente.</p>
+          <div class="metrics">
+            <article><small>CPU</small><b>18%</b><div><span style="width:18%"></span></div></article>
+            <article><small>Memoria</small><b>42%</b><div><span style="width:42%"></span></div></article>
+            <article><small>Almacenamiento</small><b>18,4 TB</b><em>libres de 29,1 TB</em></article>
+            <article class="ok"><small>Estado</small><b>Correcto</b><em>3 discos saludables</em></article>
+          </div>
+          <div class="buttons"><button>Ver sistema</button><button class="ghost">Revisar copias</button></div>
+        </div></div>
+      </div>
+
+      <div class="msg user"><div><div class="meta right">Tú <span>20:20</span></div><div class="bubble user-bubble"><p>El sábado vienen mis padres a casa. Recuérdame prepararles acceso a fotos y películas.</p></div><div class="read">✓✓</div></div></div>
+
+      <div class="msg assistant">
+        <div class="avatar-mini">✦</div>
+        <div><div class="meta">Nexo <span>20:20</span></div><div class="bubble"><p>Perfecto. He preparado una propuesta de acceso temporal:</p>
+          <section class="access">
+            <div class="access-head"><div><small>NUEVO ACCESO</small><h3>Invitados familiares</h3></div><span>Pendiente</span></div>
+            <div class="permission"><i>◫</i><div><b>Fotos</b><small>Álbumes familiares compartidos</small></div><em>✓</em></div>
+            <div class="permission"><i>▶</i><div><b>Multimedia</b><small>Películas y series de la biblioteca</small></div><em>✓</em></div>
+            <div class="permission muted"><i>▣</i><div><b>Documentos</b><small>Sin acceso</small></div><em>—</em></div>
+            <div class="buttons"><button>Aprobar propuesta</button><button class="ghost">Modificar</button></div>
+          </section>
+        </div></div>
+      </div>
+
+      <div class="chips">
+        <button data-text="¿Cómo va el servidor?">¿Cómo va el servidor?</button>
+        <button data-text="¿Qué tengo mañana?">¿Qué tengo mañana?</button>
+        <button data-text="Crea un usuario nuevo">Crear usuario</button>
+        <button data-text="Enséñame las alertas activas">Ver alertas</button>
+      </div>
+      <div class="msg assistant typing hidden" id="typing"><div class="avatar-mini">✦</div><div class="dots"><i></i><i></i><i></i></div></div>
+    </section>
+
+    <footer>
+      <div class="composer"><button class="icon attach">＋</button><textarea id="input" rows="1" placeholder="Escribe a Nexo..."></textarea><button class="icon">◉</button><button class="send" id="send">➜</button></div>
+      <div class="note"><span>Enter para enviar · Shift + Enter para salto</span><span>🔒 Cifrado dentro de tu red Nexo</span></div>
+    </footer>
+  </main>
+
+  <aside class="context">
+    <div class="context-title"><span>RESUMEN DE HOY</span><button>•••</button></div>
+    <section class="card event"><i>◷</i><div><small>PRÓXIMO EVENTO</small><h3>Reunión de seguimiento</h3><p>Mañana · 10:30</p></div></section>
+    <section class="card"><div class="card-head"><small>SERVIDOR</small><span class="online">Operativo</span></div><div class="line"><span>CPU</span><b>18%</b></div><div class="bar"><i style="width:18%"></i></div><div class="line"><span>RAM</span><b>42%</b></div><div class="bar"><i style="width:42%"></i></div><div class="last"><span>Última copia</span><b>03:12</b></div></section>
+    <section class="card"><div class="card-head"><small>ACCESOS</small><button>Ver todo</button></div><div class="activity"><i>IU</i><div><b>Iñigo</b><small>MacBook Pro · Ahora</small></div><em></em></div><div class="activity"><i class="pink">CM</i><div><b>Clara</b><small>iPhone · 18:42</small></div><em></em></div></section>
+    <section class="card price"><i>↓</i><div><small>ALERTA DE PRECIO</small><h3>IronWolf Pro 8 TB</h3><p>Objetivo: 175 €</p></div></section>
+  </aside>
+</div>
+<div class="toast" id="toast">✓ <span>Acción de demostración</span></div>
+<script src="app.js"></script>
+</body>
+</html>
